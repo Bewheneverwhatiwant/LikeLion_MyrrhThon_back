@@ -37,3 +37,4 @@ class CustomUser(AbstractUser):
 
 class Family(models.Model):
     members = models.ManyToManyField(CustomUser, related_name='families')
+

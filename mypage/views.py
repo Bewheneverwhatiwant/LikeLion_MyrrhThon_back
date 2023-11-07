@@ -14,5 +14,3 @@ class MyPageView(APIView):
             'nickname': user.nickname
         }
         return Response(data, status=status.HTTP_200_OK)
-
-

@@ -4,6 +4,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import serializers
 from .models import CustomUser, Family
 
+
 class CustomRegisterSerializer(RegisterSerializer):
     nickname = serializers.CharField(max_length=100)
     invited_users = serializers.ListField(
