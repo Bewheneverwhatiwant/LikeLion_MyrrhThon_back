@@ -12,9 +12,7 @@ urlpatterns = [
     path('member/', include('member.urls')),
     path('member/signup/', include('dj_rest_auth.registration.urls')),
     path('mypage/', include('mypage.urls')),
-    path('game/', include('game.urls')),
     path('mainpage/', include('mainpage.urls')),
-    path('infopage/', include('infopage.urls')),
     path('user_info/', include('user_info.urls')),
 ]
 
@@ -42,8 +40,6 @@ urlpatterns = [
     path('member/', include('member.urls')),
     path('member/signup/', include('dj_rest_auth.registration.urls')),
     path('mypage/', include('mypage.urls')),
-    path('game/', include('game.urls')),
     path('mainpage/', include('mainpage.urls')),
-    path('infopage/', include('infopage.urls')),
     path('user_info/', include('user_info.urls')),
 ]

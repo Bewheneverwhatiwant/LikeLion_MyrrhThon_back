@@ -31,9 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'member',
     'mypage',
-    'game',
     'mainpage',
-    'infopage',
     'user_info',
 
     #rest framework 관련

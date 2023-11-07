@@ -33,17 +33,19 @@ class CustomRegisterSerializer(RegisterSerializer):
         user.username = self.cleaned_data.get('username')
         user.nickname = self.cleaned_data.get('nickname')
         user.save()
+        
         invited_usernames = self.cleaned_data.get('invited_users', [])
-        family = Family.objects.create()
-        family.members.add(user)
-        for invited_username in invited_usernames:
-            if not invited_username:
-                continue
-            try:
-                invited_user = CustomUser.objects.get(username=invited_username)
-                family.members.add(invited_user)
-            except CustomUser.DoesNotExist:
-                pass
+        if invited_usernames:
+            family = Family.objects.create()
+            family.members.add(user)
+            for invited_username in invited_usernames:
+                if not invited_username:
+                    continue
+                try:
+                    invited_user = CustomUser.objects.get(username=invited_username)
+                    family.members.add(invited_user)
+                except CustomUser.DoesNotExist:
+                    pass
         adapter.save_user(request, user, self)
         return user
     
