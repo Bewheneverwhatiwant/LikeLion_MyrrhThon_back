@@ -1,10 +1,12 @@
-from rest_framework.routers import SimpleRouter
 from django.urls import path, include
-from .views import *
+from rest_framework.routers import DefaultRouter
+from .views import FamilyViewSet
 
-app_name = 'member'
+
+router = DefaultRouter()
+router.register(r'families', FamilyViewSet)
 
 
 urlpatterns = [
-    path('familymembers/', FamilyMembersView.as_view(), name='familymembers-list'),
+    path('', include(router.urls)),
 ]

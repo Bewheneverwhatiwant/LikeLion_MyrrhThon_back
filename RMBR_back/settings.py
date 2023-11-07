@@ -31,16 +31,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'member',
     'mypage',
+    'game',
+    'mainpage',
+    'infopage',
+    'user_info',
+
     #rest framework 관련
     'rest_framework',
     'rest_framework.authtoken',
-	#dj-rest-auth 관련
+	  #dj-rest-auth 관련
     'dj_rest_auth',
     'dj_rest_auth.registration',
-	'allauth',
-	'allauth.account',
-	# simple-jwt 관련 관련
-	'rest_framework_simplejwt',
+	  'allauth',
+	  'allauth.account',
+	  # simple-jwt 관련 관련
+	  'rest_framework_simplejwt',
+    # swagger 관련
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

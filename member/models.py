@@ -1,18 +1,40 @@
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+
+class CustomUserManager(BaseUserManager):
+    def _create_user(self, username, password, **extra_fields):
+
+        if not username:
+            raise ValueError('The given username must be set')
+        user = self.model(username=username, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, username, password, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Superuser must have is_staff=True.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Superuser must have is_superuser=True.')
+
+        return self._create_user(username, password, **extra_fields)
+
+
 class CustomUser(AbstractUser):
     REQUIRED_FIELDS = []
-    email = None
+    email = None  
     nickname = models.CharField(max_length=100)
-    invited_users = models.ManyToManyField('self', related_name='invited_by', blank=True)
-    
-    def add_invited_user(self, username):
-        invited_user = CustomUser.objects.get(username=username)
-        self.invited_users.add(invited_user)
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.username
 
 
 class Family(models.Model):
-    name = models.CharField(max_length=100)
-    members = models.ManyToManyField(CustomUser)
+    members = models.ManyToManyField(CustomUser, related_name='families')
+
