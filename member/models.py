@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
+from django.utils import timezone
 
 
 class CustomUserManager(BaseUserManager):
@@ -37,4 +38,16 @@ class CustomUser(AbstractUser):
 
 class Family(models.Model):
     members = models.ManyToManyField(CustomUser, related_name='families')
+
+class Post(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Foreign key로 사용자 모델과 연결
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    date = models.DateField(default=timezone.now)  # 현재 날짜를 기본값으로 설정
+    image = models.ImageField(upload_to='media/', null=True)
+
+
+    def __str__(self):
+        return self.title  # 게시글의 제목을 표시하도록 설정 (선택 사항)
+
 
