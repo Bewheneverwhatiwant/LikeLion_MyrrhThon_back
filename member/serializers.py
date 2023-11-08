@@ -2,7 +2,7 @@ from dj_rest_auth.registration.serializers import RegisterSerializer
 from allauth.account.adapter import get_adapter
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import serializers
-from .models import CustomUser, Family
+from .models import CustomUser, Family, Post
 
 
 class CustomRegisterSerializer(RegisterSerializer):
@@ -60,3 +60,13 @@ class FamilySerializer(serializers.ModelSerializer):
     class Meta:
         model = Family
         fields = ['members']
+
+class PostSerializer(serializers.ModelSerializer):
+    formatted_date = serializers.SerializerMethodField()
+    
+    class Meta:
+        model = Post
+        fields = ['id','user', 'title', 'content', 'image', 'formatted_date']
+
+    def get_formatted_date(self, obj):
+        return obj.date.strftime("%Y년 %m월 %d일")
