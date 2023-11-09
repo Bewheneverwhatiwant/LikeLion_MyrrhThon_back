@@ -9,13 +9,13 @@ from django.http import JsonResponse
 from django.views import View
 from django.shortcuts import get_object_or_404
 
-from .models import Post
-from .serializers import PostSerializer
+from .models import Post, Family, FamilyPost
+from .serializers import PostSerializer, FamilyPostSerializer
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.utils import timezone
 
-from rest_framework import viewsets
+from rest_framework import viewsets,status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 
@@ -91,3 +91,49 @@ class PostDetailView(View):
         post = get_object_or_404(Post, pk=pk, user=user)
         post.delete()
         return JsonResponse({'message': '게시물이 삭제되었습니다.'},json_dumps_params={'ensure_ascii': False})
+    
+
+class FamilyPostView(viewsets.ViewSet):
+    permission_classes = [IsAuthenticated]
+
+    @action(detail=False, methods=['get'])
+    def list_posts(self, request, family_id):
+        family = get_object_or_404(Family, id=family_id, members=request.user)
+        posts = FamilyPost.objects.filter(family=family)
+        serialized_posts = FamilyPostSerializer(posts, many=True).data
+        return Response({'posts': serialized_posts}, status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=['post'])
+    def create_post(self, request, family_id):
+        family = get_object_or_404(Family, id=family_id, members=request.user)
+        title = request.data.get("title")
+        content = request.data.get("content")
+
+        if not title or not content:
+            return Response({'error': '제목과 내용을 입력하세요.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        post = FamilyPost(family=family, user=request.user, title=title, content=content)
+        post.save()
+
+        return Response({'message': '게시물이 생성되었습니다.'}, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=['put', 'delete'])
+    def update_post(self, request, family_id, pk):
+        family = get_object_or_404(Family, id=family_id, members=request.user)
+        post = get_object_or_404(FamilyPost, id=pk, family=family)
+
+        if request.method == 'PUT':
+            title = request.data.get("title")
+            content = request.data.get("content")
+
+            if title is not None:
+                post.title = title
+            if content is not None:
+                post.content = content
+
+            post.save()
+
+            return Response({'message': '게시물이 업데이트되었습니다.'}, status=status.HTTP_200_OK)
+        elif request.method == 'DELETE':
+            post.delete()
+            return Response({'message': '게시물이 삭제되었습니다.'}, status=status.HTTP_204_NO_CONTENT)
