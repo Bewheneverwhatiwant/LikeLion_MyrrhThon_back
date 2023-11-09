@@ -49,5 +49,16 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title  # 게시글의 제목을 표시하도록 설정 (선택 사항)
+    
+class FamilyPost(models.Model):
+    family = models.ForeignKey(Family, on_delete= models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+    title = models.CharField(max_length= 100)
+    content = models.TextField()
+    image = models.ImageField(upload_to="media/",null = True)
+    date = models.DateField(default = timezone.now)
+
+    def __str__(self):
+        return self.title
 
 
