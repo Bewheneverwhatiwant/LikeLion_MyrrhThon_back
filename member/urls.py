@@ -1,7 +1,8 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import FamilyViewSet,PostListView,PostViewSet,PostDetailView,FamilyPostView
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'families', FamilyViewSet)
@@ -13,4 +14,4 @@ urlpatterns = [
     path('posts/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('family/<int:family_id>/posts/', FamilyPostView.as_view({'get': 'list_posts', 'post': 'create_post'}), name='family-posts'),
     path('family/<int:family_id>/posts/<int:pk>/', FamilyPostView.as_view({'put': 'update_post', 'delete': 'update_post'}), name='family-post-detail'),
-]
+]   +static(settings.MEDIA_URL, document_root =settings.MEDIA_URL)
