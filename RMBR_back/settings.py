@@ -17,7 +17,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['port-0-likelion-myrrhthon-back-1igmo82clos9yp4o.sel5.cloudtype.app', '127.0.0.1']
 
 
 # Application definition
