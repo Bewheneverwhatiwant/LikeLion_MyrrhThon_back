@@ -63,7 +63,7 @@ class FamilySerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     formatted_date = serializers.SerializerMethodField()
-    
+    image  = serializers.ImageField(use_url =True ,required =False)
     class Meta:
         model = Post
         fields = ['id','user', 'title', 'content', 'image', 'formatted_date']
@@ -73,6 +73,7 @@ class PostSerializer(serializers.ModelSerializer):
     
 class FamilyPostSerializer(serializers.ModelSerializer):
     formatted_date = serializers.SerializerMethodField()
+    image  = serializers.ImageField(use_url =True ,required =False)
 
     class Meta:
         model = FamilyPost
