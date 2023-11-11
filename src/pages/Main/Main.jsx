@@ -11,24 +11,27 @@ import { useLocation } from 'react-router-dom';
 
 //화면 Main(메인화면) 컴포넌트를 만든다
 const Main = () => {
-    const navigate = useNavigate(); // useNavigate 훅을 사용
+    const navigate = useNavigate();
     const location = useLocation();
-    const selectedImage = location.state ? (location.state.selectedImage || people) : people;
-
-    //1) '홍길동' 자리에 대입
     const [patientName, setPatientName] = useState('');
-    //2) '14' 자리에 대입
     const [daysWithDementia, setDaysWithDementia] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
 
     useEffect(() => {
-        // 여기서는 location.state에서 데이터를 가져와 state를 업데이트합니다.
-        // 적절한 키를 사용하여 가져올 수 있습니다. 예를 들어, location.state.patientName, location.state.daysWithDementia 등
-        setPatientName(location.state ? location.state.patientName : '');
-        setDaysWithDementia(location.state ? location.state.daysWithDementia : '');
-    }, [location.state]);
+        const storedPatientName = localStorage.getItem('patientName');
+        const storedDaysWithDementia = localStorage.getItem('daysWithDementia');
+        const storedSelectedImage = localStorage.getItem('selectedImage') || people;
+
+        if (storedPatientName && storedDaysWithDementia) {
+            setPatientName(storedPatientName);
+            setDaysWithDementia(storedDaysWithDementia);
+        }
+
+        setSelectedImage(storedSelectedImage);
+    }, []);
 
     const handleCompleteButtonClick_character = () => {
-        // 입력 완료 버튼 클릭 시 main 화면으로 이동
+        localStorage.setItem('selectedImage', selectedImage);
         navigate('/changecharacter');
     };
     const handleCompleteButtonClick_whatischimae = () => {
@@ -45,7 +48,7 @@ const Main = () => {
     };
 
     return (
-        <div className="iphone-frame" style={{overflowY: 'scroll'}}>
+        <div className="iphone-frame" style={{ overflowY: 'scroll' }}>
             <Header />
 
             <div className="content main-column">
@@ -88,12 +91,12 @@ const Main = () => {
                         <div className="discript-div">
                             증상
                         </div>
-                        <div className="for-text"><br/>
+                        <div className="for-text"><br />
                             <pr>오래 전에 경험했던 일은 잘 기억하나, </pr>
                             <pr>조금 전에 했던 일 또는 생각을 자주 잊어버린다. </pr>
                             <pr>음식을 조리하다가 불 끄는 것을 잊어버리는 경우가 빈번해진다. </pr>
                             <pr>평소 잘 알던 사람의 이름이 생각나지 않는다.</pr>
-                        </div><br/>
+                        </div><br />
                     </div>
                 </div>
                 <div className="sizedbox"></div>
@@ -106,7 +109,7 @@ const Main = () => {
                         <p className="for-text">메모장과 볼펜을 가지고 다니면서 잊어버리는 것들을 적어놓으세요.</p>
                     </div>
                 </div>
-                <br/><br/><br/>
+                <br /><br /><br />
             </div>
             <Nav />
         </div>

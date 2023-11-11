@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Nav from "../../component/Nav/Nav";
 import Header from "../../component/Header/Header";
@@ -15,11 +15,26 @@ import { useLocation } from 'react-router-dom';
 
 //화면 Main(메인화면) 컴포넌트를 만든다
 const MyPage = () => {
-    const location = useLocation();
-    const selectedImage = location.state ? (location.state.selectedImage || people) : people;
+    //const location = useLocation();
+    //const selectedImage = location.state ? (location.state.selectedImage || people) : people;
 
+    const location = useLocation();
     const [selected, setSelected] = useState(null);
     const navigate = useNavigate();
+    const [patientName, setPatientName] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
+
+    useEffect(() => {
+        const storedPatientName = localStorage.getItem('patientName');
+        const storedSelectedImage = localStorage.getItem('selectedImage') || people;
+
+        if (storedPatientName) {
+            setPatientName(storedPatientName);
+        }
+
+        setSelectedImage(storedSelectedImage);
+    }, []);
+
 
     const handleButtonClick = (index) => {
         setSelected(index);
@@ -49,61 +64,68 @@ const MyPage = () => {
             <div className="my-page-text-column content">
                 <img src={selectedImage} alt="이미지" className="image-overlay-people" />
                 <div className="my-page-text-row for-chimae-font">
-                    <h2>홍길동님</h2><br/>
-                    
+
+                    <h2>반가워요,</h2>
+                    <div className="just-row">
+                        <h2>{patientName}</h2>
+                        <h2>님!</h2>
+                    </div>
+                    <h2>오늘도 건강하세요.</h2>
+
+
                 </div>
                 <div>
                     <div>
-                    <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px', height: '1px' }}></div>
                         <button
                             className={`my-page-button ${selected === 2 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(2)}
                         >
-                            <div className="mypage-row" style={{marginLeft:'30px'}}>
+                            <div className="mypage-row" style={{ marginLeft: '30px' }}>
                                 <img src={icon_login} alt="이미지" />
-                                <p style={{marginRight:'160px'}}>로그인</p>
+                                <p style={{ marginRight: '160px' }}>로그인</p>
                             </div>
                         </button>
 
-                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px', height: '1px' }}></div>
                         <button
                             className={`my-page-button ${selected === 3 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(3)}
                         >
-                            <div className="mypage-row"style={{marginLeft:'30px'}}>
+                            <div className="mypage-row" style={{ marginLeft: '30px' }}>
                                 <img src={icon_logout} alt="이미지" />
-                                <p style={{marginRight:'155px'}}>로그아웃</p>
+                                <p style={{ marginRight: '155px' }}>로그아웃</p>
                             </div>
                         </button>
 
-                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px', height: '1px' }}></div>
                         <button
                             className={`my-page-button ${selected === 4 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(4)}
                         >
-                            <div className="mypage-row" style={{marginLeft:'30px'}}>
+                            <div className="mypage-row" style={{ marginLeft: '30px' }}>
                                 <img src={icon_signup} alt="이미지" />
-                                <p style={{marginRight:'140px'}}>회원 가입하기</p>
+                                <p style={{ marginRight: '140px' }}>회원 가입하기</p>
                             </div>
                         </button>
 
-                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px', height: '1px' }}></div>
                         <button
                             className={`my-page-button ${selected === 5 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(5)}
                         >
-                            <div className="mypage-row" style={{marginLeft:'30px'}}>
+                            <div className="mypage-row" style={{ marginLeft: '30px' }}>
                                 <img src={icon_deleteaccount} alt="이미지" />
-                                <p style={{marginRight:'140px'}}>회원 탈퇴하기</p>
+                                <p style={{ marginRight: '140px' }}>회원 탈퇴하기</p>
                             </div>
                         </button>
 
-                       
+
                     </div>
 
                     <div className="gray-div">
                         <div className="diary-div">
-                            <button style={{width: '350px'}}
+                            <button style={{ width: '350px' }}
                                 className={`my-page-button ${selected === 0 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(0)}
                             >
@@ -118,9 +140,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div><br/>
+                        </div><br />
                         <div className="diary-div">
-                            <button style={{width: '350px'}}
+                            <button style={{ width: '350px' }}
                                 className={`my-page-button ${selected === 0 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(6)}
                             >
@@ -135,9 +157,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div><br/>
+                        </div><br />
                         <div className="diary-div">
-                            <button style={{width: '350px'}}
+                            <button style={{ width: '350px' }}
                                 className={`my-page-button ${selected === 1 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(1)}
                             >
@@ -153,7 +175,7 @@ const MyPage = () => {
                                 </div>
                             </button>
                         </div>
-                        <br/>
+                        <br />
                     </div>
 
                 </div>

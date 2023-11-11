@@ -38,15 +38,13 @@ const WritePatientName = () => {
 
 
     const handleCompleteButtonClick = () => {
-        // Main 화면으로 정보 전달
-        navigate('/main', {
-            state: {
-                patientName: inputText_1,
-                daysWithDementia: calculateDaysWithDementia(inputText_2, inputText_3)
-            }
-        });
-    };
+        // Save data to localStorage
+        localStorage.setItem('patientName', inputText_1);
+        localStorage.setItem('daysWithDementia', calculateDaysWithDementia(inputText_2, inputText_3).toString());
 
+        // Main 화면으로 정보 전달
+        navigate('/main');
+    };
 
     return (
         <div className="iphone-frame">
