@@ -29,16 +29,18 @@ const MyDiary_ex_2 = () => {
             <Header />
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
-                <div>
-                    <p>나중에 나도 대소변을 못가리게 될까?</p>
-                    <div className="make-nickname-start">
+                <div> 
+                        <div className="make-nickname-start" style={{marginRight:'65%'}}>
                         <div className="make-row">
                             <img src={profile} alt="이미지" />
                             <p className="nickname">할머니</p>
                         </div>
                     </div>
+                    <p>나중에 나도 대소변을 못가리게 될까?</p>
+                    <div className="line-border"> </div>
                 </div>
-                <div className="my-diary-pop">
+                <div className="my-diary-pop" style={{borderStyle:'none'}}>
+                    <br/>
                     열심히 응원해주는 가족들에게는 말을 못하겠다. 사실 너무 무섭다. 언젠가는 모든 기억을 잃어버리게 되는 건 아닌지, 대소변을 못가리게 되면 어쩌지... 너무 무섭다.
                 </div>
                 <div className="sizedbox"></div>

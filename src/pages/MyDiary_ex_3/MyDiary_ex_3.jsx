@@ -30,15 +30,16 @@ const MyDiary_ex_3 = () => {
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
                 <div>
-                    <p>아들에게는 말 못하지만, 사실 너무 섭섭했다...</p>
-                    <div className="make-nickname-start">
+                        <div className="make-nickname-start" style={{marginRight:'65%'}}>
                         <div className="make-row">
                             <img src={profile} alt="이미지" />
                             <p className="nickname">할머니</p>
                         </div>
                     </div>
+                    <p>아들에게는 말 못하지만, 사실 너무 섭섭했다...</p>
+                    <div className="line-border"> </div> <br/>
                 </div>
-                <div className="my-diary-pop">
+                <div className="my-diary-pop" style={{borderStyle:'none'}}>
                     아들 부부와 손주들에게 짐이 되는 기분이다. 요양원 비용, 용돈 문제, 유산 문제... 나이가 들고 늙으니 눈치가 보인다. 나 때문에 집안의 불화가 일어나는 건 아닌지...
                 </div>
                 <div className="sizedbox"></div>

@@ -31,16 +31,18 @@ const MyDiary_ex_4 = () => {
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
                 <div>
-                    <p>며느리는 딸이 될 수 없다.. 씁쓸하다.</p>
-                    <div className="make-nickname-start">
+                        <div className="make-nickname-start">
                         <div className="make-row">
                             <img src={profile} alt="이미지" />
                             <p className="nickname">할머니</p>
                         </div>
                     </div>
+                    <p>며느리는 딸이 될 수 없다.. 씁쓸하다.</p>
+                    <div className="line-border"></div>
+
                 </div>
-                <div className="my-diary-pop">
-                    손주 알굴이 갈 수록 희미해지고, 아들 내외 얼굴이 기억이 점점 안나고... 자주 보고싶고, 얘기도 많이 하고싶은데 며느리는 나를 부담스러워 하는 것 같다. 서글프다...
+                <div className="my-diary-pop" style={{borderStyle:'none'}}> <br/>
+                    손주 얼굴이 갈 수록 희미해지고, 아들 내외 얼굴이 기억이 점점 안나고... 자주 보고싶고, 얘기도 많이 하고싶은데 며느리는 나를 부담스러워 하는 것 같다. 서글프다...
                     <img src={icon_profile_4} alt="이미지" className="image-clicked" />
                 </div>
                 <div className="sizedbox"></div>

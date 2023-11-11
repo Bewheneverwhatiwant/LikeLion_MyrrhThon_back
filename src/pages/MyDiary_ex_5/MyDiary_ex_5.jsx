@@ -31,16 +31,17 @@ const MyDiary_ex_5 = () => {
             <Header />
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
-                <div>
-                    <p>며느리와 가족들에게 미안한 나날의 연속...</p>
-                    <div className="make-nickname-start">
-                        <div className="make-row">
+                <div className="make-nickname-start" style={{marginRight:'65%'}}>
+                        <div className="make-row" >
                             <img src={profile} alt="이미지" />
                             <p className="nickname">할머니</p>
                         </div>
                     </div>
+                <div>
+                    <p>며느리와 가족들에게 미안한 나날의 연속...</p>
+                <div className="line-border"></div><br/>
                 </div>
-                <div className="my-diary-pop">
+                <div className="my-diary-pop" style={{borderStyle:'none'}}>
                     방금 말 한 것도 까먹고, 어느날은 나도 모르게 화를 내고 있고, 아들이 날 의심하는 것 같아서 소리도 지르고... 걷다가 넘어지고. 화장실 실수하고. 가족들에게 미안하고 또 미안하다...
                     <img src={icon_profile_5} alt="이미지" className="image-clicked" />
                 </div>

@@ -31,16 +31,18 @@ const MyDiary_ex_6 = () => {
             <Header />
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
-                <div>
-                    <p>내가 죽고 나면 아들이, 며느리가 나를 기억해주기를..</p>
-                    <div className="make-nickname-start">
+
+                <div className="make-nickname-start" style={{marginRight:'65%'}}>
                         <div className="make-row">
                             <img src={profile} alt="이미지" />
-                            <p className="nickname">할머니</p>
+                            <p className="nickname" >할머니</p>
                         </div>
                     </div>
+                <div>
+                    <p>내가 죽고 나면 아들, 며느리가 기억해주기를..</p>
                 </div>
-                <div className="my-diary-pop">
+                <div className="line-border"></div>
+                <div className="my-diary-pop" style={{borderStyle:'none'}}><br/>
                     치매에 걸려 잘해준 것도 없고, 고생만 시켜서 미안한 맘 뿐이다. 건강했던 시절의 좋은 기억만 갖고 좋은 엄마로, 시어머니로 기억해주렴
                     <img src={icon_profile_6} alt="이미지" className="image-clicked" />
                 </div>
