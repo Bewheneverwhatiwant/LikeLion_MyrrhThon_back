@@ -32,7 +32,7 @@ const FamilyDiary_ex_6 = () => {
                 <div>
                     <div className="make-nickname-start">
                         <div className="make-row">
-                            <img src={profile} alt="이미지" />
+                        <img src={profile} alt="이미지" />
                             <p className="nickname">삼촌입니다</p>
                         </div>
                     </div>
