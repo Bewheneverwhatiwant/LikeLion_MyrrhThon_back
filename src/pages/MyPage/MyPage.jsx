@@ -54,7 +54,7 @@ const MyPage = () => {
                 </div>
                 <div>
                     <div>
-                        <div className="border-div"></div>
+                    <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 2 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(2)}
@@ -65,7 +65,7 @@ const MyPage = () => {
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 3 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(3)}
@@ -76,7 +76,7 @@ const MyPage = () => {
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 4 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(4)}
@@ -87,7 +87,7 @@ const MyPage = () => {
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 5 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(5)}
@@ -118,13 +118,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div>
-                        <div className="sizedbox"></div>
+                        </div><br/>
                         <div className="diary-div">
-<<<<<<< HEAD
                             <button style={{width: '350px'}}
-=======
-                            <button
                                 className={`my-page-button ${selected === 0 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(6)}
                             >
@@ -139,11 +135,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div>
-                        <div className="sizedbox"></div>
+                        </div><br/>
                         <div className="diary-div">
-                            <button
->>>>>>> back/master
+                            <button style={{width: '350px'}}
                                 className={`my-page-button ${selected === 1 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(1)}
                             >
