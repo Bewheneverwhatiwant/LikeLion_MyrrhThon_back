@@ -63,65 +63,70 @@ const MyPage = () => {
             <div className="my-page-text-column content">
                 <img src={selectedImage} alt="이미지" className="image-overlay-people" />
                 <div className="my-page-text-row for-chimae-font">
+<<<<<<< HEAD
                     <h2>반가워요,</h2>
                     <div className="just-row">
                         <h2>{patientName}</h2>
                         <h2>님!</h2>
                     </div>
                     <h2>오늘도 건강하세요.</h2>
+=======
+                    <h2>홍길동님</h2><br/>
+                    
+>>>>>>> origin/master
                 </div>
                 <div>
                     <div>
-                        <div className="border-div"></div>
+                    <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 2 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(2)}
                         >
-                            <div className="mypage-row">
+                            <div className="mypage-row" style={{marginLeft:'30px'}}>
                                 <img src={icon_login} alt="이미지" />
-                                로그인
+                                <p style={{marginRight:'160px'}}>로그인</p>
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 3 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(3)}
                         >
-                            <div className="mypage-row">
+                            <div className="mypage-row"style={{marginLeft:'30px'}}>
                                 <img src={icon_logout} alt="이미지" />
-                                로그아웃
+                                <p style={{marginRight:'155px'}}>로그아웃</p>
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 4 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(4)}
                         >
-                            <div className="mypage-row">
+                            <div className="mypage-row" style={{marginLeft:'30px'}}>
                                 <img src={icon_signup} alt="이미지" />
-                                회원 가입하기
+                                <p style={{marginRight:'140px'}}>회원 가입하기</p>
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                        <div style={{ background: '#F0F0F0', width: '390.001px',height: '1px'}}></div>
                         <button
                             className={`my-page-button ${selected === 5 ? 'selected' : ''}`}
                             onClick={() => handleButtonClick(5)}
                         >
-                            <div className="mypage-row">
+                            <div className="mypage-row" style={{marginLeft:'30px'}}>
                                 <img src={icon_deleteaccount} alt="이미지" />
-                                회원 탈퇴하기
+                                <p style={{marginRight:'140px'}}>회원 탈퇴하기</p>
                             </div>
                         </button>
 
-                        <div className="border-div"></div>
+                       
                     </div>
 
                     <div className="gray-div">
                         <div className="diary-div">
-                            <button
+                            <button style={{width: '350px'}}
                                 className={`my-page-button ${selected === 0 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(0)}
                             >
@@ -136,10 +141,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div>
-                        <div className="sizedbox"></div>
+                        </div><br/>
                         <div className="diary-div">
-                            <button
+                            <button style={{width: '350px'}}
                                 className={`my-page-button ${selected === 0 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(6)}
                             >
@@ -154,10 +158,9 @@ const MyPage = () => {
 
                                 </div>
                             </button>
-                        </div>
-                        <div className="sizedbox"></div>
+                        </div><br/>
                         <div className="diary-div">
-                            <button
+                            <button style={{width: '350px'}}
                                 className={`my-page-button ${selected === 1 ? 'selected' : ''}`}
                                 onClick={() => handleButtonClick(1)}
                             >
@@ -173,6 +176,7 @@ const MyPage = () => {
                                 </div>
                             </button>
                         </div>
+                        <br/>
                     </div>
 
                 </div>

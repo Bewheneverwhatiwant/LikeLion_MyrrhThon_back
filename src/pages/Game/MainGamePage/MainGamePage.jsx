@@ -24,7 +24,7 @@ const MainGamePage = () => {
     };
 
     return (
-        <div className="iphone-frame">
+        <div className="iphone-frame" style={{overflowY:'scroll'}}>
             <Header />
             <br/>
             <div className="main-game-page-text-column content">

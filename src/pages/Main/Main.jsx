@@ -50,7 +50,7 @@ const Main = () => {
     };
 
     return (
-        <div className="iphone-frame" style={{ overflowY: 'auto' }}>
+        <div className="iphone-frame" style={{overflowY: 'scroll'}}>
             <Header />
 
             <div className="content main-column">
@@ -93,12 +93,12 @@ const Main = () => {
                         <div className="discript-div">
                             증상
                         </div>
-                        <div className="for-text">
-                            <p>오래 전에 경험했던 일은 잘 기억하나,</p>
-                            <p>조금 전에 했던 일 또는 생각을 자주 잊어버린다.</p>
-                            <p>음식을 조리하다가 불 끄는 것을 잊어버리는 경우가 빈번해진다.</p>
-                            <p>평소 잘 알던 사람의 이름이 생각나지 않는다.</p>
-                        </div>
+                        <div className="for-text"><br/>
+                            <pr>오래 전에 경험했던 일은 잘 기억하나, </pr>
+                            <pr>조금 전에 했던 일 또는 생각을 자주 잊어버린다. </pr>
+                            <pr>음식을 조리하다가 불 끄는 것을 잊어버리는 경우가 빈번해진다. </pr>
+                            <pr>평소 잘 알던 사람의 이름이 생각나지 않는다.</pr>
+                        </div><br/>
                     </div>
                 </div>
                 <div className="sizedbox"></div>
@@ -111,10 +111,8 @@ const Main = () => {
                         <p className="for-text">메모장과 볼펜을 가지고 다니면서 잊어버리는 것들을 적어놓으세요.</p>
                     </div>
                 </div>
-                <div className="sizedbox"></div>
+                <br/><br/><br/>
             </div>
-
-
             <Nav />
         </div>
     );

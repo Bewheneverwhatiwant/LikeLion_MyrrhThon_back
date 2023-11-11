@@ -10,10 +10,13 @@ const WhatisChimae = () => {
             <Header />
             <br/><br/>
             <div className="iphone-frame" style={{overflow:"scroll"}}>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}}>
                 <h2>치매란 무엇일까요?</h2>
                 <p>치매는 후천적으로 기억, 언어, 판단력 등의 여러 영역의 인지 기능이 감소하여 일상생활을 제대로 수행하지 못하는 임상 증후군을 의미합니다.</p>
                 <p>치매에는 알츠하이머병이라 불리는 노인성 치매, 중풍 등으로 인해 생기는 혈관성 치매가 있습니다. 이 밖에도 다양한 원인에 의한 치매가 있습니다.</p>
-                <div className="sizedbox"></div>
+                </div>
+                <br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}}>
                 <h2>치매는 왜 생기는 걸까요?</h2>
                 <p>전반적인 뇌 기능의 손상을 일으킬 수 있는 모든 질환이 치매의 원인이 될 수 있습니다.</p>
                 <p>흔히 알고 있는 알츠하이머병은 원인 미상의 신경퇴행성 질환으로, 전체 치매의 50~60%를 차지합니다.</p>
@@ -27,6 +30,8 @@ const WhatisChimae = () => {
                 <p>혈관성 치매는 뇌 안에서 혈액순환이 잘 이루어지지 않아 서서히 신경세포가 죽거나,</p>
                 <p>갑자기 큰 뇌혈관이 막히거나 뇌혈관이 터지면서 뇌세포가 죽으면서 발생하는 치매를 의미합니다. </p>
                 <div className="sizedbox"></div>
+                </div><br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}} >
                 <h2>건망증인지, 치매인지 모르겠어요. 구분할 수 있는 증상이 있나요?</h2>
                 <p>치매와 건망증은 다릅니다. 건망증은 일반적으로 기억력의 저하를 호소하지만,</p>
                 <p>지남력이나 판단력 등은 정상이어서 일상적인 생활에 지장을 주지 않습니다.</p>
@@ -54,6 +59,8 @@ const WhatisChimae = () => {
                 <p>수면 장애가 생길 수도 있습니다.</p>
                 <p>잠을 지나치게 많이 자거나, 반대로 불면증에 시달리기도 합니다.</p>
                 <div className="sizedbox"></div>
+                </div><br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}} >
                 <h2>치매는 어떻게 진단받을 수 있나요?</h2>
                 <p>치매의 진단은 먼저 환자와 보호자를 통해 간단한 병력을 청취하고,</p>
                 <p>간단한 선별 검사를 시행하여 인지 능력을 평가합니다.</p>
@@ -65,6 +72,8 @@ const WhatisChimae = () => {
                 <p>치매의 원인을 찾기 위한 혈액 검사, 뇌영상 검사(MRI 등)를 시행합니다.</p>
                 <p>이 검사를 통해 치매의 원인이 확인되면 원인에 맞는 치료를 진행합니다. </p>
                 <div className="sizedbox"></div>
+                </div><br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}}>
                 <h2>치매는 어떻게 치료하나요?</h2>
                 <p>① 원인적 접근</p>
                 <p>주로 치료 가능한 치매 환자에게 적용할 수 있는 방법입니다.</p>
@@ -81,6 +90,8 @@ const WhatisChimae = () => {
                 <p>따라서 환자는 기본적 일상생활을 최대한 스스로 유지할 수 있도록 하는</p>
                 <p>작업 요법, 인지 기능 강화 요법 등과 같은 다양한 프로그램에 참여함으로써 삶의 질을 향상시킬 수 있습니다. </p>
                 <div className="sizedbox"></div>
+                </div><br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}}>
                 <h2>치매 치료는 경과가 좋은 편인가요?</h2>
                 <p>치매의 임상 경과는 원인에 따라 매우 다양한 양상을 보입니다. 이를 일률적으로 기술하기는 무척 어렵습니다.</p>
                 <p>일부 치매(예: 영양 결핍, 염증에 의한 치매 등)의 경우는 적절한 치료를 받으면 이전의 상태로 돌아갈 수 있습니다.</p>
@@ -94,6 +105,8 @@ const WhatisChimae = () => {
                 <p>질환이 더 진행하면, 다양한 행동 증상(예: 배회, 환각, 화를 냄, 불면)이 나타나기 시작합니다.</p>
                 <p>치매 환자 사망의 가장 흔한 직접적 원인은 폐렴, 요로감염증, 욕창성 궤양 등의 감염으로 인한 패혈증입니다.</p>
                 <div className="sizedbox"></div>
+                </div><br/>
+                <div style={{borderRadius: '10px',background: '#ffffff', boxShadow: '0px 0px 3.52351px 3px rgba(86, 86, 86, 0.20) inset', margin:'10px', padding:'10px'}}>
                 <h2>특별히 주의해야할 점이 있을까요?</h2>
                 <p>치매의 증상 및 종류는 다양합니다.</p>
                 <p>현재까지 발생 기전이 확실히 규명되지 않았고, 원인을 치료할 수 있는 치료법도 없는 상태입니다.</p>
@@ -107,6 +120,7 @@ const WhatisChimae = () => {
                 <p>술과 담배는 기억력 등의 인지 기능에 나쁜 영향을 미칩니다.</p>
                 <p>충분한 수면을 취하는 것이 좋습니다. 수면 부족은 기억력을 떨어뜨릴 수 있습니다.</p>
                 <p>메모하는 생활을 습관화하는 것이 좋습니다.</p>
+                </div>
             </div>
             <Nav />
         </div>

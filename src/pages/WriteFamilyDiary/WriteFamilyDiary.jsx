@@ -31,8 +31,8 @@ const WriteFamilyDiary = () => {
     };
 
     return (
-        <div className="iphone-frame">
-            <Header />
+        <div className="iphone-frame" style={{overflowY:'scroll'}}>
+            <Header /><br/>
             <div className="content write-family-diary-column">
                 <div className="for-chimae-font">
                     <h2>가족들과 함께 볼 수 있는 일기장이에요.</h2>
@@ -66,7 +66,7 @@ const WriteFamilyDiary = () => {
                 <button className="write-family-diary-button" onClick={handleCompleteButtonClick}>
                     입력 완료
                 </button>
-            </div>
+            </div><br/><br/><br/>
             <Nav />
         </div>
     );

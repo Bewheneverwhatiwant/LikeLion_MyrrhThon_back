@@ -19,6 +19,9 @@
         padding: 10px;
         outline: none;
         transition: color 0.3s, border-color 0.3s;
+        z-index: 999;
+        margin-top: 10px;
+        
 
         &.active {
             color: #000;

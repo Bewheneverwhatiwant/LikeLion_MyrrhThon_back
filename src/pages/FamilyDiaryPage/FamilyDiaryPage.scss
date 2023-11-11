@@ -6,11 +6,12 @@
 .fixed-button {
     position: fixed; // 화면 위치 고정
     bottom: 100px; // 화면 하단과의 간격 조정
-    right: 30px; // 화면 우측과의 간격 조정
-    width: 80px;
-    height: 80px;
-    border: 2px solid #735AF3;
-    background-color: white; // 원 모양의 버튼 배경색
+    top: 84%;
+    right: 40%;
+    width: 45px;
+    height: 45px;
+    border-style: none;
+    background-color: #b7a9ff; // 원 모양의 버튼 배경색
     border-radius: 50%; // 원 모양 만들기
     text-align: center;
     font-size: 24px;
@@ -19,24 +20,27 @@
     box-shadow: 3px 3px 5px #888; // 우측 하단 대각선 방향 그림자
     z-index: 999; // 다른 요소 위에 표시
     cursor: pointer; // 마우스 커서 변경
+
 }
 
 .invite-button {
     position: fixed; // 화면 위치 고정
-    bottom: 200px; // 화면 하단과의 간격 조정
-    right: 30px; // 화면 우측과의 간격 조정
-    width: 80px;
-    height: 80px;
-    border: 2px solid #735AF3;
-    background-color: white; // 원 모양의 버튼 배경색
+    bottom: 100px; // 화면 하단과의 간격 조정
+    top: 74%;
+    right: 40%;
+    width: 45px;
+    height: 45px;
+    border-style: none;
+    background-color: #b7a9ff; // 원 모양의 버튼 배경색
     border-radius: 50%; // 원 모양 만들기
     text-align: center;
-    font-size: 16px;
-    line-height: 10px; //글자 다 들어가게 하기
+    font-size: 24px;
+    line-height: 50px;
     color: #735AF3; // 텍스트 색상
     box-shadow: 3px 3px 5px #888; // 우측 하단 대각선 방향 그림자
     z-index: 999; // 다른 요소 위에 표시
     cursor: pointer; // 마우스 커서 변경
+
 }
 
 .family-diary {

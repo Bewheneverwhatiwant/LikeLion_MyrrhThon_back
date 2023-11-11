@@ -1,8 +1,9 @@
 .splash-text {
-    display: flex;
-    align-items: start; // 수직 방향 중앙 정렬
-    justify-content: center; // 수평 방향 시작 정렬
-    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: #735AF3;
 }
 

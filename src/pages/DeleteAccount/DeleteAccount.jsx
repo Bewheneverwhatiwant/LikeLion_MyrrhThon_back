@@ -17,16 +17,17 @@ const Logout = () => {
     return (
         <div className="iphone-frame">
             <Header />
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <div className="content delete-column">
                 <div className="for-chimae-font">
-                    <h2>정말 회원 탈퇴 하시겠어요?</h2>
-                    <h2>회원 탈퇴를 하면 가족 일기장을 사용할 수 없어요.</h2>
-                    <h2>가족 일기장을 사용하시려면 다시 회원 가입을 해주세요.</h2>
+                    <h2 style={{fontSize:'15px'}}>회원 탈퇴를 하면 가족 일기장을 사용할 수 없어요.</h2>
+                    
                 </div>
-                <div className="sizedbox"></div>
+                <br/><br/>
                 <button className="delete-button" onClick={handleCompleteButtonClick}>
                     회원 탈퇴 하기
                 </button>
+                <h2 style={{fontSize:'10px'}}>가족 일기장을 사용하시려면 다시 회원 가입을 해주세요.</h2>
             </div>
             <Nav />
         </div>

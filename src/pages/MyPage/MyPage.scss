@@ -7,28 +7,9 @@
     width: 390px;
     height: 70px;
     background-color: transparent;
-    /* 배경을 투명으로 설정 */
     border: 2px solid #ffffff;
-    // border-radius: 5px;
-    // color: #735AF3;
     font-size: 16px;
-    // cursor: pointer;
-    // transition: background-color 0.3s;
-    /* 배경색 전환 애니메이션 */
 
-    // &.selected {
-    //     background-color: #735AF3;
-    //     /* 선택된 버튼의 배경색을 변경 */
-    //     color: white;
-    //     /* 텍스트 색상 변경 */
-    // }
-
-    // &:hover {
-    //     background-color: #735AF3;
-    //     /* 마우스 호버 시 배경색 변경 */
-    //     color: white;
-    //     /* 텍스트 색상 변경 */
-    // }
 }
 
 .my-page-text-column {
@@ -73,7 +54,7 @@
 }
 
 .sizedbox {
-    height: 30px;
+    height: 0px;
 }
 
 .mypage-row {
@@ -85,13 +66,13 @@
 
 .border-div {
     width: 100%;
-    background: gray;
-    height: 2px;
+    background: #F0F0F0;
+    height: 1px;
 }
 
 .gray-div {
     width: 390px;
-    height: 350px;
+    height: 260px;
     background: #F0F0F0;
     display: flex;
     align-items: center; // 수직 방향 중앙 정렬

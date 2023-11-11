@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import './Splash.scss';
 import remember_logo from '../../assets/logo_header_remember.svg';
+import axios from 'axios';
 
 function Splash() {
     const navigate = useNavigate();
@@ -17,12 +18,10 @@ function Splash() {
 
     return (
         <div className="iphone-frame">
-            <div className='make-center'>
-                <div className="splash-text">
-                    <img src={remember_logo} alt="이미지" />
-                    <p>우리 가족을 기억해</p>
-                    <p>소중한 나를 기억해</p>
-                </div>
+            <div className="splash-text">
+                <img src={remember_logo} alt="이미지"  style={{width:'240px', height:'60px'}} />
+                <p>우리 가족을 기억해</p>
+                <p>소중한 나를 기억해</p>
             </div>
         </div>
     );

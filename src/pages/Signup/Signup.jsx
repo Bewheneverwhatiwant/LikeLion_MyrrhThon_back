@@ -33,7 +33,7 @@ const Signup = () => {
 
     return (
         <div className="iphone-frame">
-            <Header />
+            <Header /><br/>
             <div className="content signup-column">
 
                 <div>

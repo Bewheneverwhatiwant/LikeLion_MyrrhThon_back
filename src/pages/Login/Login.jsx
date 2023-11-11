@@ -4,7 +4,7 @@ import Header from "../../component/Header/Header";
 import { useState } from 'react';
 import './Login.scss';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+
 
 //화면 Main(메인화면) 컴포넌트를 만든다
 const Login = () => {
@@ -35,18 +35,19 @@ const Login = () => {
     return (
         <div className="iphone-frame">
             <Header />
+            <br/>
             <div className="content login-column">
 
                 <div>
                     <p>아이디를 입력해주세요.</p>
-                    <div className="sizedbox"></div>
                     <input
                         className="login-input"
                         type="text"
                         value={inputText_1}
                         onChange={handleInputChange_1}
                     />
-                    <div className="sizedbox"></div>
+                    <br/>
+                    
                     <p>비밀번호를 입력해주세요.</p>
                     <input
                         className="login-input"
@@ -54,6 +55,7 @@ const Login = () => {
                         value={inputText_2}
                         onChange={handleInputChange_2}
                     />
+                    <br/><br/>
                     <p>처음 이용하시는 건가요?</p>
                     <button className="go-to-signup-button" onClick={handleCompleteButtonClick_signup}>
                         회원가입 하러 가기
