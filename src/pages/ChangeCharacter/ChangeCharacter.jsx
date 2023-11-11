@@ -10,18 +10,19 @@ import woman_curly from '../../assets/woman_curly.png';
 import './ChangeCharacter.scss';
 
 const ChangeCharacter = () => {
-    const navigate = useNavigate(); // useNavigate 훅을 사용
-    const [selectedImage, setSelectedImage] = useState(people); // 초기 이미지 선택
+    const navigate = useNavigate();
+    const [selectedImage, setSelectedImage] = useState(people);
 
     const handleChangeImage = (newImage) => {
-        // 이미지 변경 버튼을 누를 때 호출되는 함수
-        setSelectedImage(newImage); // 선택한 이미지로 업데이트
+        setSelectedImage(newImage);
     };
 
     const handleBack = () => {
-        navigate('/main', { state: { selectedImage } });// 이미지 정보를 state에 전달
+        // Save selectedImage to localStorage
+        localStorage.setItem('selectedImage', selectedImage);
+        // Navigate back to the main screen
+        navigate('/main', { state: { selectedImage } });
     };
-
     return (
         <div className="iphone-frame">
             <Header />

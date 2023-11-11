@@ -15,25 +15,26 @@ import { useLocation } from 'react-router-dom';
 
 //화면 Main(메인화면) 컴포넌트를 만든다
 const MyPage = () => {
-    const location = useLocation();
-    const selectedImage = location.state ? (location.state.selectedImage || people) : people;
+    //const location = useLocation();
+    //const selectedImage = location.state ? (location.state.selectedImage || people) : people;
 
+    const location = useLocation();
     const [selected, setSelected] = useState(null);
     const navigate = useNavigate();
-
-    //1) '홍길동' 자리에 대입
     const [patientName, setPatientName] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
 
     useEffect(() => {
-        // Retrieve data from localStorage
         const storedPatientName = localStorage.getItem('patientName');
+        const storedSelectedImage = localStorage.getItem('selectedImage') || people;
 
-        // Update state only if data is present in localStorage
         if (storedPatientName) {
             setPatientName(storedPatientName);
-
         }
+
+        setSelectedImage(storedSelectedImage);
     }, []);
+
 
     const handleButtonClick = (index) => {
         setSelected(index);
