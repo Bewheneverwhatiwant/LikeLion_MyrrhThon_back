@@ -114,7 +114,7 @@ const Main = () => {
 
                 <div className="image-container main-row">
                     <div className="main-column">
-                        <img src={selectedImage} alt="이미지" className="image-overlay-people" />
+                        <img src={selectedImage} alt="이미지" className="image-overlay-people image" />
                         <button className="character-button" onClick={handleCompleteButtonClick_character}>
                             캐릭터 바꾸기
                         </button>
