@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Nav from "../../component/Nav/Nav";
 import Header from "../../component/Header/Header";
@@ -20,6 +20,20 @@ const MyPage = () => {
 
     const [selected, setSelected] = useState(null);
     const navigate = useNavigate();
+
+    //1) '홍길동' 자리에 대입
+    const [patientName, setPatientName] = useState('');
+
+    useEffect(() => {
+        // Retrieve data from localStorage
+        const storedPatientName = localStorage.getItem('patientName');
+
+        // Update state only if data is present in localStorage
+        if (storedPatientName) {
+            setPatientName(storedPatientName);
+
+        }
+    }, []);
 
     const handleButtonClick = (index) => {
         setSelected(index);
@@ -50,7 +64,10 @@ const MyPage = () => {
                 <img src={selectedImage} alt="이미지" className="image-overlay-people" />
                 <div className="my-page-text-row for-chimae-font">
                     <h2>반가워요,</h2>
-                    <h2>홍길동님!</h2>
+                    <div className="just-row">
+                        <h2>{patientName}</h2>
+                        <h2>님!</h2>
+                    </div>
                     <h2>오늘도 건강하세요.</h2>
                 </div>
                 <div>

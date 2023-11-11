@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../../component/Nav/Nav";
 import Header from "../../component/Header/Header";
 import './SeeMyFamily.scss';
@@ -11,6 +11,20 @@ const SeeMyFamily = () => {
     const handleWriteFamilyDiaryClick_invite = () => {
         navigate('/invitebyid');
     };
+
+    //1) '홍길동' 자리에 대입
+    const [patientName, setPatientName] = useState('');
+
+    useEffect(() => {
+        // Retrieve data from localStorage
+        const storedPatientName = localStorage.getItem('patientName');
+
+        // Update state only if data is present in localStorage
+        if (storedPatientName) {
+            setPatientName(storedPatientName);
+
+        }
+    }, []);
 
     return (
         <div className="iphone-frame" style={{ overflowY: 'scroll' }}>
@@ -27,7 +41,7 @@ const SeeMyFamily = () => {
                                 <div className="row-sizedbox"></div>
                                 <img src={profile} alt="이미지" />
                                 <div className="row-sizedbox"></div>
-                                할머니(나)
+                                {patientName}(나)
                             </div>
 
                         </div>

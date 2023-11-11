@@ -21,11 +21,16 @@ const Main = () => {
     const [daysWithDementia, setDaysWithDementia] = useState('');
 
     useEffect(() => {
-        // 여기서는 location.state에서 데이터를 가져와 state를 업데이트합니다.
-        // 적절한 키를 사용하여 가져올 수 있습니다. 예를 들어, location.state.patientName, location.state.daysWithDementia 등
-        setPatientName(location.state ? location.state.patientName : '');
-        setDaysWithDementia(location.state ? location.state.daysWithDementia : '');
-    }, [location.state]);
+        // Retrieve data from localStorage
+        const storedPatientName = localStorage.getItem('patientName');
+        const storedDaysWithDementia = localStorage.getItem('daysWithDementia');
+
+        // Update state only if data is present in localStorage
+        if (storedPatientName && storedDaysWithDementia) {
+            setPatientName(storedPatientName);
+            setDaysWithDementia(storedDaysWithDementia);
+        }
+    }, []);
 
     const handleCompleteButtonClick_character = () => {
         // 입력 완료 버튼 클릭 시 main 화면으로 이동
