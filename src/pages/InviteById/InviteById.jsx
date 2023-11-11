@@ -19,7 +19,7 @@ const InviteById = () => {
     const handleCompleteButtonClick = () => {
         if (inputText === 'lny021102') {
             alert('일기장에 가족이 초대되었습니다!');
-            navigate('/familydiarypage');
+            navigate('/seemyfamily');
         } else {
             alert('아이디가 없어요! 가족에게 회원가입을 안내해주세요.');
         }

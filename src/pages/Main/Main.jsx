@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "../../component/Nav/Nav";
 import Header from "../../component/Header/Header";
 import { Link } from 'react-router-dom';
@@ -14,6 +14,18 @@ const Main = () => {
     const navigate = useNavigate(); // useNavigate 훅을 사용
     const location = useLocation();
     const selectedImage = location.state ? (location.state.selectedImage || people) : people;
+
+    //1) '홍길동' 자리에 대입
+    const [patientName, setPatientName] = useState('');
+    //2) '14' 자리에 대입
+    const [daysWithDementia, setDaysWithDementia] = useState('');
+
+    useEffect(() => {
+        // 여기서는 location.state에서 데이터를 가져와 state를 업데이트합니다.
+        // 적절한 키를 사용하여 가져올 수 있습니다. 예를 들어, location.state.patientName, location.state.daysWithDementia 등
+        setPatientName(location.state ? location.state.patientName : '');
+        setDaysWithDementia(location.state ? location.state.daysWithDementia : '');
+    }, [location.state]);
 
     const handleCompleteButtonClick_character = () => {
         // 입력 완료 버튼 클릭 시 main 화면으로 이동
@@ -49,13 +61,13 @@ const Main = () => {
                 </div>
                 <div>
                     <div className="main-row">
-                        <h2 className="for-main-chimae-font">홍길동</h2>
+                        <h2 className="for-main-chimae-font">{patientName}</h2>
                         <h2 className="for-main-chimae-font">님</h2>
                     </div>
 
                     <div className="main-row">
                         <h2>치매와 함께한지</h2>
-                        <h2>14</h2>
+                        <h2>{daysWithDementia}</h2>
                         <h2>일 째</h2>
                     </div>
                 </div>
