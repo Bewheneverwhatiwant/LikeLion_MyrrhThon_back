@@ -35,21 +35,24 @@ const WriteMyDiary = () => {
                 <div className="for-chimae-font">
                     <h2>나만 볼 수 있는 일기장이에요.</h2>
                 </div>
-                <div className='for-chimae-font'> <p>일기의 제목을 지어주세요.</p> </div>
+                <div className='for-chimae-font'></div>
+                <br/>
                 <div>
                     <textarea
                         className="my-diary-title-input"
                         type="text"
                         value={inputText}
+                        placeholder="제목"
                         onChange={handleInputChange_title}>
                     </textarea>
                 </div>
-
-                <div>
+                <div className="line"> </div>
+                <div><br/>
                     <textarea
                         className="my-diary-input"
                         type="text"
                         value={inputText}
+                        placeholder="오늘 하루는 어땠나요?"
                         onChange={handleInputChange}
                     ></textarea>
                 </div>

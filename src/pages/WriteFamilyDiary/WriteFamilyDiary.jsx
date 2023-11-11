@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 //화면 Main(메인화면) 컴포넌트를 만든다
 const WriteFamilyDiary = () => {
     const [inputText, setInputText] = useState(''); // 초기값 설정(이름)
+    
     const navigate = useNavigate(); // useNavigate 훅을 사용
     const [selectedImage, setSelectedImage] = useState(null); // 선택된 이미지 상태 추가
 
@@ -37,20 +38,24 @@ const WriteFamilyDiary = () => {
                 <div className="for-chimae-font">
                     <h2>가족들과 함께 볼 수 있는 일기장이에요.</h2>
                 </div>
-                <div className='for-chimae-font'> <p>일기의 제목을 지어주세요.</p> </div>
+                <div className='for-chimae-font'></div>
+                <br/>
                 <div>
                     <textarea
                         className="my-diary-title-input"
                         type="text"
                         value={inputText}
+                        placeholder="제목"
                         onChange={handleInputChange_title}>
                     </textarea>
                 </div>
-                <div>
+                <div className="line"> </div>
+                <div><br/>
                     <textarea
                         className="family-diary-input"
                         type="text"
                         value={inputText}
+                        placeholder="오늘 하루는 어땠나요?"
                         onChange={handleInputChange}
                     ></textarea>
                 </div>

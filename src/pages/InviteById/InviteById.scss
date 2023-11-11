@@ -56,6 +56,10 @@
     align-items: flex-start; // 수직 방향 시작 정렬
     justify-content: flex-start; // 수평 방향 시작 정렬
     flex-direction: column;
+    border-style: none;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 0px 0px 3.52351px 0px rgba(0, 0, 0, 0.20) inset;
 }
 
 .iphone-frame {
