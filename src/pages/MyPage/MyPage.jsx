@@ -62,7 +62,7 @@ const MyPage = () => {
             <Header />
             <br />
             <div className="my-page-text-column content">
-                <img src={selectedImage} alt="이미지" className="image-overlay-people" />
+                <img src={selectedImage} alt="이미지" className="image-overlay-people image" />
                 <div className="my-page-text-row for-chimae-font">
 
                     <h2>반가워요,</h2>
