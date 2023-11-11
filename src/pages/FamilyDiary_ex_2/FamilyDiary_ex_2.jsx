@@ -37,10 +37,11 @@ const FamilyDiary_ex_2 = () => {
                             <p className="nickname">할머니</p>
                         </div>
                     </div>
-                    <p>치매에 걸렸어도 우리 딸 여전히 기억하고 사랑한다</p>
+                    <p>치매에 걸렸어도 우리 딸 여전히 너무 사랑해</p>
                 </div>
+                <div className="line-border"></div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     엄마가 많이 사랑한다. 70이 다 되어가고, 우리 딸도 50을 바라보네... 50이 되어도 너는 아직 내 아기야. 엄마가 세상에 있든 없든, 엄마는 우리 딸을 항상 기억한다.
                     <img src={picture_3} alt="이미지" className="image-clicked" />
                 </div>

@@ -39,8 +39,9 @@ const FamilyDiary_ex_3 = () => {
                     </div>
                     <p>우리 가족 저번에 설악산 갔을 때~^^</p>
                 </div>
+                <div className="line-border"></div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     작년 설악산 등산 때, 할머니도 우리 조카들도 신나게 걸었던 기억이 나네. 어머님도 이 사진 보시고 힘내요. 어머님 간병하느라 형수님도 너무 수고가 많으십니다. 우리 가족들 모두 파이팅입니다.^^
                     <img src={picture} alt="이미지" className="image-clicked" />
                 </div>

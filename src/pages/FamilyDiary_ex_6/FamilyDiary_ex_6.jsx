@@ -37,9 +37,10 @@ const FamilyDiary_ex_6 = () => {
                         </div>
                     </div>
                     <p>옷 따뜻하게 입고 다녀야 합니다. 우리 가족!!</p>
+                    <div className="line-border"></div>
                 </div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     날씨가 많이 춥습니다. 어머님도, 동생도, 우리 조카들도 옷 꽁꽁 여미고 다녀야 감기 들지 않습니다. 오늘도 파이팅하시고, 어머님 사랑합니다.^^
                 </div>
                 <div className="sizedbox"></div>

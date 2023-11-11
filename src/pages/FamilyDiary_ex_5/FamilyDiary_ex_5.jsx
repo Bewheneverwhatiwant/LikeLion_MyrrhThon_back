@@ -39,8 +39,9 @@ const FamilyDiary_ex_5 = () => {
                     </div>
                     <p>어머님 기억이 안날 땐 여길 보고 기억하세요.</p>
                 </div>
+                <div className="line-border"></div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     김철수 - 남편, 김형만 - 아들, 채송화 - 며느리, 김유리 - 손녀, 김훈이 - 손자
                     <img src={picture} alt="이미지" className="image-clicked" />
                 </div>

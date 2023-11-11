@@ -36,10 +36,11 @@ const FamilyDiary_ex_4 = () => {
                             <p className="nickname">어머니 아들</p>
                         </div>
                     </div>
-                    <p>우리 가족 모두 힘을 냅시다. 할머니는 다시 건강해지실 거야...</p>
+                    <p>우리 모두 힘을 냅시다. 다시 건강해지실 거야...</p>
                 </div>
+                <div className="line-border"></div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     우리 어머니 간병하느라 와이프도 고생이 많습니다. 할머니 심부름을 잘 해주는 우리 자식들도 기특하고... 지금처럼만 다들 이 시기를 잘 견디면, 할머니는 다시 건강해질 거야... 사랑한다 우리가족, 얼른 쾌차하세요 우리 어머니.
                 </div>
                 <div className="sizedbox"></div>

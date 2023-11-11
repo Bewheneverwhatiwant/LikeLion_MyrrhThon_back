@@ -31,7 +31,7 @@ const MyDiary_ex_4 = () => {
             <div className="content clicked-my-diary-column">
                 <h2>이렇게 일기가 작성되었어요.</h2>
                 <div>
-                        <div className="make-nickname-start">
+                        <div className="make-nickname-start" style={{marginRight:'65%'}}>
                         <div className="make-row">
                             <img src={profile} alt="이미지" />
                             <p className="nickname">할머니</p>

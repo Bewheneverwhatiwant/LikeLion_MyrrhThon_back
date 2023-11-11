@@ -38,8 +38,9 @@ const FamilyDiary_ex_1 = () => {
                     </div>
                     <p>오늘 할머니가 자꾸 깜빡해서 미안해~^^</p>
                 </div>
+                <div className="line-border"></div>
                 <div className="sizedbox"></div>
-                <div className="family-diary-pop">
+                <div className="family-diary-pop" style={{borderStyle:'none'}}>
                     치매에 걸리니 자주 잊어버리는구나. 리모콘도, 손주들 얼굴도... 할머니가 다 기억해주지 못해서 미안해. 항상 사랑한다. 내 자식들, 내 손주들.
                 </div>
                 <div className="sizedbox"></div>
