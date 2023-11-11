@@ -3,21 +3,19 @@
     /* 헤더의 높이만큼 추가 */
 }
 
-.fixed-button {
+.add-button {
     position: fixed; // 화면 위치 고정
     bottom: 100px; // 화면 하단과의 간격 조정
     top: 84%;
-    right: 40%;
+    right: 41%;
     width: 45px;
     height: 45px;
     border-style: none;
     background-color: #b7a9ff; // 원 모양의 버튼 배경색
     border-radius: 50%; // 원 모양 만들기
-    text-align: center;
-    font-size: 24px;
-    line-height: 50px;
-    color: #735AF3; // 텍스트 색상
-    box-shadow: 3px 3px 5px #888; // 우측 하단 대각선 방향 그림자
+    border-radius: 45px;
+    background: rgba(115, 90, 243, 0.48);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 999; // 다른 요소 위에 표시
     cursor: pointer; // 마우스 커서 변경
 
@@ -26,18 +24,16 @@
 .invite-button {
     position: fixed; // 화면 위치 고정
     bottom: 100px; // 화면 하단과의 간격 조정
-    top: 74%;
-    right: 40%;
+    top: 75%;
+    right: 41%;
     width: 45px;
     height: 45px;
     border-style: none;
     background-color: #b7a9ff; // 원 모양의 버튼 배경색
     border-radius: 50%; // 원 모양 만들기
-    text-align: center;
-    font-size: 24px;
-    line-height: 50px;
-    color: #735AF3; // 텍스트 색상
-    box-shadow: 3px 3px 5px #888; // 우측 하단 대각선 방향 그림자
+    border-radius: 45px;
+    background: rgba(115, 90, 243, 0.48);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 999; // 다른 요소 위에 표시
     cursor: pointer; // 마우스 커서 변경
 
