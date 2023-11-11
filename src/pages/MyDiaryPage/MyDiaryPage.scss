@@ -80,6 +80,7 @@
 }
 
 .sizedbox {
+    width: 10px;
     height: 30px;
 }
 
@@ -153,4 +154,9 @@
     align-items: center; // 수직 방향 중앙 정렬
     justify-content: flex-start; // 수평 방향 시작 정렬
     flex-direction: row;
+}
+
+.image-mypage {
+    max-width: 50px; // 이미지의 최대 너비를 부모 컨테이너의 너비로 설정
+    max-height: 50px; // 이미지의 최대 높이를 부모 컨테이너의 높이로 설정
 }
